@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego del Ahorcado Plan de Emergencias</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Pantalla de inicio -->
+  <div id="pantalla-inicio">
+    <h1>UNIVERSIDAD DEL TOLIMA - CAT SIBATÉ</h1>
+    <h2>Semestre VIII - Grupo I</h2>
+    <h3>Juego del Ahorcado </h3>
+    <p><em>Conoce acerca del PLAN DE PREVENCIÓN, PREPARACIÓN Y RESPUESTA ANTE EMERGENCIAS - UT</em></p>
+
+    <img src="imagen-sst.jpg" alt="Imagen SST Colombia" width="300" style="margin: 20px 0; border-radius: 10px;">
+
+    <p>Ingresa tu nombre para comenzar:</p>
+    <input type="text" id="nombreJugador" placeholder="Tu nombre">
+    <br><br>
+    <button onclick="iniciarJuego()">Iniciar juego</button>
+    <br><br>
+    <img src="cipas5-circular-cursiva.png" alt="Creado por Luchoberm" width="180">
+  </div>
+
+  <!-- Área del juego -->
+  <div id="juego" style="display: none;">
+    <div id="nombreVisible" style="margin-bottom: 10px;"></div>
+    <div id="pista"></div>
+    <div id="palabra"></div>
+    <div id="teclado"></div>
+    <div id="intentos"></div>
+    <div id="resultado"></div>
+
+    <!-- Figura del ahorcado (ahora dentro del área de juego) -->
+    <div id="figuraAhorcado" class="ahorcado">
+      <img id="imagenAhorcado" src="ahorcado0.png" alt="Ahorcado" width="150">
+    </div>
+
+    <button id="btnSiguiente" onclick="siguientePalabra()">Siguiente palabra</button>
+  </div>
+
+  <script src="ahorcado.js"></script>
+</body>
+</html>
